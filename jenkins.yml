@@ -1,0 +1,13 @@
+---
+- name: Deploy Jenkins
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Set context for kubectl
+      command: "kubectl config use-context {{ kubectl_context_name }}"
+      changed_when: false
+
+    - name: "Deploy Jenkins"
+      include_role:
+        name: jenkins

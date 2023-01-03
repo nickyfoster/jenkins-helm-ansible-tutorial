@@ -1,0 +1,7 @@
+# Ansible
+*.retry
+.vault_password_file
+
+
+# MacOS local files
+.DS_Store
