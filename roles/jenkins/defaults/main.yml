@@ -17,3 +17,16 @@ jenkins_lim_mem: "3Gi"
 
 jenkins_additional_plugins: {}
 jenkins_agent_pod_templates: {}
+jenkins_approved_signatures: []
+
+pipeline_name: "demo-pipeline"
+pipeline_git_url:  "https://github.com/nickyfoster/jenkins-helm-ansible-tutorial.git"
+pipeline_git_branch: "main"
+pipeline_git_creds: ""
+pipeline_jenkinsfile_path: "Jenkinsfile"
+
+ingress:
+  enabled: yes
+  class_name: nginx
+  annotations: 
+    kubernetes.io/ingress.class: "nginx"

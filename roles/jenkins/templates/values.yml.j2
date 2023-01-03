@@ -22,7 +22,7 @@ controller:
   
   initScripts:
     - |
-      {% filter indent(width=6) %}{% include 'init0-sample-pipeline-job.groovy' %}{% endfilter %}
+      {% filter indent(width=6) %}{% include 'init0-sample-pipeline-job.groovy.j2' %}{% endfilter %}
 
 agent:
   podTemplates: {{ jenkins_agent_pod_templates }}

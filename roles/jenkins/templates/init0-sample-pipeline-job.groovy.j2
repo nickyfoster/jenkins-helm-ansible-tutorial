@@ -1,4 +1,5 @@
 import hudson.plugins.git.*
+import jenkins.model.*
 import org.jenkinsci.plugins.workflow.cps.*
 import org.jenkinsci.plugins.workflow.job.*
 
@@ -25,3 +26,10 @@ pipelineDefinition.setLightweight(true)
 
 def pipelineJob = new WorkflowJob(instance, pipelineName)
 pipelineJob.setDefinition(pipelineDefinition)
+def pipeline = instance.getItemByFullName(pipelineName)
+
+if (pipeline) {
+    cliPipeline.setDefinition(pipelineDefinition)
+} else {
+    instance.add(pipelineJob, pipelineJob.name)
+}

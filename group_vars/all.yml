@@ -17,7 +17,7 @@ ingress:
     external-dns.alpha.kubernetes.io/hostname: "{{ jenkins_base_url }}"
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:CHANGEME"
+    alb.ingress.kubernetes.io/certificate-arn: "CHANGEME"
     alb.ingress.kubernetes.io/ssl-redirect: "443"
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
     
@@ -40,8 +40,4 @@ jenkins_agent_pod_templates:
             resourceLimitMemory: '1024Mi'
 
 
-pipeline_name: "sample-pipeline"
-pipeline_git_url: ""
-pipeline_git_branch: "main"
-pipeline_git_creds: ""
-pipeline_jenkinsfile_path: "Jenkinsfile"
+
