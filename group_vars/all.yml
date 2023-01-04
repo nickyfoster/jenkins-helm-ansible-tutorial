@@ -1,5 +1,5 @@
 ## AWS parameters
-kubectl_context_name: "aws-eks-dev"
+kubectl_context_name: "eks-dev-EFTg6Jhd"
 
 ## Jenkins parameters
 jenkins_base_url: "jenkins-test.example.com"
